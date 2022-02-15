@@ -8,13 +8,19 @@
  * Return: None
  */
 
-void swap(int *array, int i, int k)
-{
-	int tmp;
+/**
+  * swap - swaps two given indexes
+  * @array: the array
+  * @left: left pointer
+  * @right: right pointer
+  * Return: void
+  */
 
-	tmp = array[i];
-	array[i] = array[k];
-	array[k] = tmp;
+void swap(int *array, int left, int right)
+{
+	array[left] += array[right];
+	array[right] = array[left] - array[right];
+	array[left] -= array[right];
 }
 
 /**
