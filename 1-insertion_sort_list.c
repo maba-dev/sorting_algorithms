@@ -33,7 +33,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *actual_nodes;
 	listint_t *head = *list;
 
-	if (head == NULL)
+	if (head == NULL || list == NULL)
 		return;
 	head->prev = NULL;
 	actual_nodes = head->next;
