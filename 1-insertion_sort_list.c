@@ -31,11 +31,11 @@ void swap(listint_t **list, listint_t *actual_nodes, listint_t *prev)
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *actual_nodes;
-	listint_t *head = *list;
 
 	if (list == NULL || *list == NULL)
 		return;
-	actual_nodes = head->next;
+
+	actual_nodes = (*list)->next;
 	while (actual_nodes != NULL)
 	{
 		while (actual_nodes->prev && (actual_nodes->n < actual_nodes->prev->n))
