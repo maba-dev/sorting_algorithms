@@ -18,13 +18,12 @@ void swap(int *array, int i, int k)
 }
 
 /**
- * 
- * 
- * @array:
- * @low: 
- * @high: 
- * @size:
- * Return: int
+ * partition - function the Lomuto partition scheme.
+ * @array: The array of arrays
+ * @low: The low to array index
+ * @high: the high to array index
+ * @size: the size of the array
+ * Return: the pivot array
  */
 
 int partition(int *array, int low, int high, size_t size)
@@ -55,11 +54,10 @@ int partition(int *array, int low, int high, size_t size)
 
 /**
  * quick - quick function
- * 
- * @array:
- * @low:
- * @high: 
- * @size:
+ * @array: The array of arrays
+ * @low: The low to array index
+ * @high: the high to array index
+ * @size: the size of the array
  * Return: None
  */
 
@@ -76,7 +74,6 @@ void quick(int *array, int low, int high, size_t size)
 }
 /**
  * quick_sort - function to sort array
- * 
  * @array: array of arrays
  * @size: size of array
  * Return: None
@@ -85,7 +82,7 @@ void quick(int *array, int low, int high, size_t size)
 void quick_sort(int *array, size_t size)
 {
 
-	if (size < 1)
+	if (size <= 1)
 		return;
 
 	quick(array, 0, size - 1, size);
