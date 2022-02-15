@@ -35,7 +35,6 @@ void insertion_sort_list(listint_t **list)
 
 	if (head == NULL || list == NULL)
 		return;
-	head->prev = NULL;
 	actual_nodes = head->next;
 	while (actual_nodes != NULL)
 	{
